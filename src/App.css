@@ -163,3 +163,7 @@
   font-size: medium;
   
 }
+
+.pinkGB::after{
+  background: pink!important;
+}

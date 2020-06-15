@@ -32,7 +32,7 @@ class Projects extends Component {
                 height: "300px",
                 backgroundImage: `url(${require("./images/main1.jpeg")})`,
                 backgroundRepeat: 'no-repeat',
-              backgroundPosition: 'center',
+                backgroundPosition: 'center',
                 resizeMode: "cover",
               }}
             ></CardTitle>
@@ -147,10 +147,10 @@ class Projects extends Component {
           onChange={(tabId) => this.setState({ activeTab: tabId }) }
           ripple
         >
-          <Tab>React</Tab>
-          <Tab>Angular</Tab>
-          <Tab>Swift</Tab>
-          <Tab>Others</Tab>
+          <Tab className={"pinkGB"}>React</Tab>
+          <Tab className={'pinkGB'}>Angular</Tab>
+          <Tab className={'pinkGB'}>Swift</Tab>
+          <Tab className={'pinkGB'}>Others</Tab>
         </Tabs>
 
         <Grid>
