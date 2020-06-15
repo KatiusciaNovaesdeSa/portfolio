@@ -3,6 +3,7 @@ var router = express.Router();
 var nodemailer = require("nodemailer");
 var cors = require("cors");
 const creds = require("./config");
+const path = require('path');
 
 var transport = {
   host: "smtp.mailtrap.io", // Don’t forget to replace with the SMTP host of your provider
@@ -70,3 +71,8 @@ app.use(cors());
 app.use(express.json());
 app.use("/", router);
 app.listen(3002);
+
+app.use(express.static(path.join(__dirname, 'build')));
+app.get('/*', (req, res) => {
+  res.sendFile(path.join(__dirname, 'build', 'index.html'));
+});
