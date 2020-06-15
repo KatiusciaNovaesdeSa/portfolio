@@ -1,0 +1,165 @@
+.header-color {
+  background: #ee9ca7; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #ffdde1,
+    #ee9ca7
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #ffdde1,
+    #ee9ca7
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.landing-grid {
+  background: white;
+  text-align: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.mdl-progress > .progressbar {
+  background-color: #f73378 !important;
+  margin: "auto";
+  width: "75%";
+}
+
+.projects-grid {
+  display: flex;
+}
+
+.avatar-img2 {
+  height: 500px;
+  padding-top: 10em;
+}
+
+.avatar-img {
+  height: 250px;
+  padding-top: 5em;
+}
+
+/*resume page css*/
+.resume-right-col {
+  background: #27221f;
+  color: white;
+  padding: 2em;
+}
+
+/*contact page css*/
+.contact-body {
+  margin: auto;
+  background: black;
+  /*background: grey;*/
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  padding-top: 2em;
+}
+
+.contact-grid {
+  text-align: center;
+  justify-content: center;
+  width: 80%;
+  height: 550px;
+  background: white;
+  color: black;
+  border: 2px solid black;
+  margin-bottom: 20px;
+}
+
+.contact-grid h3 {
+  /*font-family: 'Allan', sans-serif;*/
+  font-family: "Zeyada", cursive;
+  color: palevioletred;
+  /*text-shadow: 2px 1px palevioletred;*/
+}
+
+.contact-grid h2 {
+  font-family: "Anton", sans-serif;
+}
+
+.contact-grid p {
+  font-family: "Oxygeb", sans-serif;
+  font-weight: bold;
+}
+
+.contact-grid hr {
+  border-top: 5px dotted black;
+  width: 50%;
+  margin: auto;
+}
+
+.contact-list i {
+  font-size: 50px;
+  padding-right: 5rem;
+}
+
+.banner-text {
+  background-color: black;
+  opacity: 0.8;
+  width: 75%;
+  margin: auto;
+  border-radius: 10px;
+}
+
+.banner-text h1 {
+  font-size: 66px;
+  font-weight: bold;
+  color: pink;
+}
+
+.banner-text hr {
+  border-top: 5px dotted pink;
+  width: 50%;
+  margin: auto;
+}
+
+.banner-text p {
+  color: white;
+  font-size: 18px;
+  padding: 1em;
+}
+
+.social-links {
+  display: flex;
+  justify-content: space-between;
+  width: 50%;
+  margin: auto;
+}
+
+.social-links i {
+  color: white;
+  font-size: 3em;
+  padding: 8px;
+}
+
+.demo-tabs > .onChange {
+  color: #f73378 !important;
+
+}
+
+.btn.btn-primary {
+  color: #ffffff;
+  background-color: #f73378;
+  border-color: pink;
+}
+
+.btn.btn-primary:hover,
+.btn.btn-primary:focus,
+.btn.btn-primary:active,
+.btn.btn-primary.active {
+  color: #ffffff;
+  background-color: #f73378;
+  border-color: pink;
+}
+
+/*about me font */
+.par_fon p {
+  font-family: 'Dosis';
+  font-size: medium;
+  
+}
