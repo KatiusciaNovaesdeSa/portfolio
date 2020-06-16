@@ -5,13 +5,13 @@ var cors = require("cors");
 const creds = require("./config");
 const path = require('path');
 
-var transport = nodemailer.createTransport ({
-  host: "smtp.mailtrap.io", // Don’t forget to replace with the SMTP host of your provider
+var transport = nodemailer.createTransport({
+  host: "smtp.mailtrap.io",
   port: 2525,
   auth: {
-    user: creds.USER,
-    pass: creds.PASS,
-  },
+    user: "968e7ef87e15fd",
+    pass: "f8fe082ef15df7"
+  }
 });
 
 var transporter = nodemailer.createTransport(transport);
