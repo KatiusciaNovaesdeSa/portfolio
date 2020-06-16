@@ -48,7 +48,7 @@ class Contact extends Component {
             <h3 style={{ fontFamily: "Anton" }}>
               <Emoji text="Contact Me!! 🙂" />
             </h3>
-            <hr />
+            <hr style={{borderTop: '1px dotted pink'}}/>
             <div style={{paddingTop:'3em'}}>
               <App/>
             </div>

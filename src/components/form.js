@@ -1,72 +1,106 @@
-import React from 'react';
-import axios from 'axios';
+import React, { useState } from 'react'
+import axios from 'axios'
 
-class App extends React.Component{
-  
-  constructor(props) {
-	super(props);
-	this.state = {
-  	name: '',
-  	email: '',
-  	message: ''
-	}
+export default () => {
+  const [status, setStatus] = useState({
+    submitted: false,
+    submitting: false,
+    info: { error: false, msg: null }
+  })
+  const [inputs, setInputs] = useState({
+    email: '',
+    message: ''
+  })
+  const handleServerResponse = (ok, msg) => {
+    if (ok) {
+      setStatus({
+        submitted: true,
+        submitting: false,
+        info: { error: false, msg: msg }
+      })
+      setInputs({
+        email: '',
+        message: ''
+      })
+    } else {
+      setStatus({
+        info: { error: true, msg: msg }
+      })
+    }
   }
-
-  handleSubmit(e){
-    e.preventDefault();
-    axios({
-      method: "POST", 
-      url:"http://localhost:3002/send", 
-      data:  this.state
-    }).then((response)=>{
-      if (response.data.status === 'success'){
-        alert("Message Sent."); 
-        this.resetForm()
-      }else if(response.data.status === 'fail'){
-        alert("Message failed to send.")
-      }
+  const handleOnChange = e => {
+    e.persist()
+    setInputs(prev => ({
+      ...prev,
+      [e.target.id]: e.target.value
+    }))
+    setStatus({
+      submitted: false,
+      submitting: false,
+      info: { error: false, msg: null }
     })
   }
-
-  
-  resetForm(){
+  const handleOnSubmit = e => {
+    e.preventDefault()
+    setStatus(prevStatus => ({ ...prevStatus, submitting: true }))
+    axios({
+      method: 'POST',
+      url: 'https://formspree.io/mlepnqkw',
+      data: inputs
+    })
+      .then(response => {
+        handleServerResponse(
+          true,
+          'Thank you, your message has been submitted.'
+        )
+      })
+      .catch(error => {
+        handleServerResponse(false, error.response.data.error)
+      })
+  }
+  return (
+    <main>
     
-     this.setState({name: '', email: '', message: ''})
-  }
-  
-  render() {
-	return(
-  	<div className="App">
-  	<form id="contact-form" onSubmit={this.handleSubmit.bind(this)} method="POST">
-  	<div className="form-group">
-      	<label htmlFor="name">Name</label>
-      	<input type="text" className="form-control" id="name" value={this.state.name} onChange={this.onNameChange.bind(this)} />
-  	</div>
-  	<div className="form-group">
-      	<label htmlFor="exampleInputEmail1">Email address</label>
-      	<input type="email" className="form-control" id="email" aria-describedby="emailHelp" value={this.state.email} onChange={this.onEmailChange.bind(this)} />
-  	</div>
-  	<div className="form-group">
-      	<label htmlFor="message">Message</label>
-      	<textarea className="form-control" rows="5" id="message" value={this.state.message} onChange={this.onMessageChange.bind(this)} />
-  	</div>
-  	<button type="submit" className="btn btn-primary">Submit</button>
-  	</form>
-  	</div>
-	);
-  }
+      
+      <form onSubmit={handleOnSubmit}>
+        
+        <div className="form-group">
+        <label htmlFor="email">Email</label>
+        <br/>
+        <input
+          id="email"
+          type="email"
+          name="_replyto"
+          onChange={handleOnChange}
+          required
+          value={inputs.email}
+        />
+        </div>
+        
+        <div className="form-group">
+        <label htmlFor="message">Message</label>
+        <br/>
+        <textarea
+          id="message"
+          name="message"
+          onChange={handleOnChange}
+          required
+          value={inputs.message}
+        />
+        </div>
 
-  onNameChange(event) {
-	this.setState({name: event.target.value})
-  }
-
-  onEmailChange(event) {
-	this.setState({email: event.target.value})
-  }
-
-  onMessageChange(event) {
-	this.setState({message: event.target.value})
-  }
+        <button type="submit" disabled={status.submitting}>
+          {!status.submitting
+            ? !status.submitted
+              ? 'Submit'
+              : 'Submitted'
+            : 'Submitting...'}
+        </button>
+      </form>
+      {status.info.error && (
+        <div className="error">Error: {status.info.msg}</div>
+      )}
+      {!status.info.error && status.info.msg && <p>{status.info.msg}</p>}
+    </main>
+  )
 }
-
-export default App;
