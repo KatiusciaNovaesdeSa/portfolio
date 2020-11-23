@@ -47,6 +47,16 @@ class Others extends Component {
       <Button variant="link" href="https://github.com/KatiusciaNovaesdeSa/PersonalDictionary" target="_blank" style={{ color: "palevioletred" }}>GITHUB</Button>
     </Card.Body>
   </Card>
+            
+ <Card>
+  <Card.Body>
+      <Card.Title>Personal Dictionary</Card.Title>
+      <Card.Text>
+         Userfeel Tester Certified.
+      </Card.Text>
+       <a href="https://app.userfeel.com/t/2f67b25c" target="_blank"><img src="https://app.userfeel.com/tester/410092/image?.png"  width="257" class="no-b-lazy" ></a>
+    </Card.Body>
+  </Card>
 
   
 
