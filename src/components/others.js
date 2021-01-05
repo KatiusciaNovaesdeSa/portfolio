@@ -54,7 +54,7 @@ class Others extends Component {
       <Card.Text>
          Userfeel Tester Certified.
       </Card.Text>
-       <a href="https://app.userfeel.com/t/2f67b25c" target="_blank"><img src="https://app.userfeel.com/tester/410092/image?.png"  width="257" class="no-b-lazy" ></img></a>
+       <a href="https://app.userfeel.com/t/2f67b25c" target="_blank" rel="noopener noreferrer"> <img src="https://app.userfeel.com/tester/410092/image?.png" alt="userfeel logo"  width="220" class="no-b-lazy" ></img></a>
     </Card.Body>
   </Card>
 

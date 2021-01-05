@@ -26,7 +26,7 @@ class Landing extends Component {
 
 
             <div className="banner-text">
-            <p> HTML/CSS | Boostrap | JavaScript | React | NodeJS | Angular | Swift | MongoDB </p>  
+            <p> HTML/CSS | Boostrap | JavaScript | React | NodeJS | Angular | Swift | MongoDB | PHP </p>  
             <hr/>
 
             <div className="social-links">
@@ -52,7 +52,7 @@ class Landing extends Component {
               </a>
 
             </div>
-            </div>
+          </div>
           
         </Grid>
         

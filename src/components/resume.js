@@ -19,10 +19,9 @@ class Resume extends Component {
             </div>
 
             <h3 style={{paddingTop: '2em'}}>Katiuscia Novaes de Sa</h3>
-            <h4 style={{color:'grey'}}>Full-Stack Web Developer</h4>
+            <h4 style={{color:'grey'}}>Full-Stack Developer| Web Designer | E-commerce Coordinator</h4>
             <hr style= {{borderTop: '3px solid #f73378', width: '50%'}}/>
-            <p> I'm an Computer Programmer Analyst’s college graduate. Looking for new challenges in the design, 
-              development, and testing of computing systems and software products.</p>
+            <p> Looking for new challenges in the design, development, and testing of computing systems and software products.</p>
             <hr style= {{borderTop: '3px solid #f73378', width: '50%'}}/>
             <h5>Address</h5>
             <p>105 The Queensway</p>
@@ -34,6 +33,13 @@ class Resume extends Component {
 
           <Cell className= "resume-right-col" col={8}>
            <h3>Education</h3>
+
+           <Education
+            startYear={2020}
+            endYear={2021}
+            schoolName="Fanshawe College"
+            schoolDescription= "Post-graduate in Information Security Management"
+           /> 
 
           <Education
             startYear={2017}
@@ -51,6 +57,20 @@ class Resume extends Component {
            <hr style={{borderTop: '3px solid #f73378'}}/>
 
           <h3>Experience</h3> 
+
+          <Experience
+            startYear={2020}
+            endYear={2021}
+            jobName= "E-Commerce Coordinator - Mosaic North America - Toronto, ON"
+            jobDescription=  " Working closely with business owners from the concept through to launching their site, as well as assisting with the site marketing and promotion. Selecting and implementing an e-commerce platform, incorporating business branding and logos, providing support during the website launch, training on website maintenance and order fulfillment." 
+            />
+
+            <Experience
+            startYear={2020}
+            endYear={2020}
+            jobName= "Web Developer - Pilot Interactive -Toronto, ON"
+            jobDescription=  " Assist in writing well designed, testable, efficient code in the development of an online music festival website using best practices.Technologies used: ReactJS, NextJS, StoryBlok,Typescript, SASS."
+            />  
 
           <Experience
             startYear={2017}
