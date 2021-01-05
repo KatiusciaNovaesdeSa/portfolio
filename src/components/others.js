@@ -50,7 +50,7 @@ class Others extends Component {
             
  <Card>
   <Card.Body>
-      <Card.Title>Personal Dictionary</Card.Title>
+      <Card.Title>Userfeel Tester Certified</Card.Title>
       <Card.Text>
          Userfeel Tester Certified.
       </Card.Text>
