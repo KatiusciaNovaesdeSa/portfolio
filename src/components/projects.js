@@ -151,7 +151,7 @@ class Projects extends Component {
               style={{
                 color: "#fff",
                 height: "300px",
-                backgroundImage: `url(${require("./images/easy.png")})`,
+                backgroundImage: `url(${require("./images/easyg.png")})`,
                 backgroundRepeat: "no-repeat",
                 backgroundPosition: "center",
                 resizeMode: "cover",
